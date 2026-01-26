@@ -39,7 +39,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/GZJ/wcsharp/releases/download/v$version/wcsharp-tools.zip"
+                "url": "https://github.com/GZJ/wcsharp/releases/download/v$version/wcsharp.zip"
             }
         }
     }
