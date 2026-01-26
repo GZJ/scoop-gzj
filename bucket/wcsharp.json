@@ -1,0 +1,46 @@
+{
+    "version": "1.0.0",
+    "description": "Window control utilities for Windows",
+    "homepage": "https://github.com/GZJ/wcsharp",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/GZJ/wcsharp/releases/download/v1.0.0/wcsharp-tools.zip",
+            "hash": ""
+        }
+    },
+    "bin": [
+        "wcs-close.exe",
+        "wcs-exit.exe",
+        "wcs-focus.exe",
+        "wcs-hide-altab.exe",
+        "wcs-hide-vis.exe",
+        "wcs-id.exe",
+        "wcs-id-fuzz.exe",
+        "wcs-ids.exe",
+        "wcs-inspector-win-info.exe",
+        "wcs-max.exe",
+        "wcs-min.exe",
+        "wcs-monitors-list.exe",
+        "wcs-monitors-w2m.exe",
+        "wcs-move.exe",
+        "wcs-move-resize.exe",
+        "wcs-pid.exe",
+        "wcs-pid-fuzz.exe",
+        "wcs-rect.exe",
+        "wcs-resize.exe",
+        "wcs-restore.exe",
+        "wcs-show-altab.exe",
+        "wcs-show-vis.exe",
+        "wcs-tray.exe",
+        "wcs-wait.exe"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/GZJ/wcsharp/releases/download/v$version/wcsharp-tools.zip"
+            }
+        }
+    }
+}

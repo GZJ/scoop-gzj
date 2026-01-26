@@ -1,0 +1,26 @@
+{
+    "version": "1.0.0",
+    "description": "Clipboard utilities for Windows",
+    "homepage": "https://github.com/GZJ/gclip-toolbox",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/GZJ/gclip-toolbox/releases/download/v1.0.0/gclip-toolbox.zip",
+            "hash": ""
+        }
+    },
+    "bin": [
+        "gclipboard.exe",
+        "gcopy.exe",
+        "gpaste.exe",
+        "gpaste-image.exe"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/GZJ/gclip-toolbox/releases/download/v$version/gclip-toolbox.zip"
+            }
+        }
+    }
+}
