@@ -1,0 +1,21 @@
+{
+    "version": "1.0.0",
+    "description": "DTrace for Windows (64-bit)",
+    "homepage": "https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/dtrace",
+    "license": "MIT",
+    "url": "https://download.microsoft.com/download/7/9/d/79d6b79a-5836-4118-a9b7-60bc77c97bf7/DTrace.amd64.msi",
+    "hash": "379fa23fb3d0c079a58d9989faf4435ae3b9109032b0cf1e84695eac445e8804",
+    "bin": [
+        "DTrace\\dtrace.exe"
+    ],
+    "installer": {
+        "script": [
+            "msiexec /i \"$dir\\DTrace.amd64.msi\" /qn /norestart"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "msiexec /x \"$dir\\DTrace.amd64.msi\" /qn /norestart"
+        ]
+    }
+}
