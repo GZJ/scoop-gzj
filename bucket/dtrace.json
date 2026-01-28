@@ -1,5 +1,5 @@
 {
-    "version": "1.0.0",
+    "version": "1.13.1",
     "description": "DTrace for Windows (64-bit)",
     "homepage": "https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/dtrace",
     "license": "MIT",
