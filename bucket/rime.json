@@ -1,0 +1,35 @@
+{
+    "version": "0.17.4",
+    "description": "Weasel - Rime Input Method Engine for Windows",
+    "homepage": "https://rime.im/",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/rime/weasel/releases/download/0.17.4/weasel-0.17.4.0-installer.exe#/setup.exe",
+    "hash": "cf509534a8f5f8af9c98ed7cbb8f135439f145a8cbe7e50ede42bb5b5ab45c29",
+    "installer": {
+        "script": [
+            "Start-Process -FilePath \"$dir\\setup.exe\" -ArgumentList \"/D=$dir\" -Verb RunAs",
+            "Write-Host 'Please complete the installation in the GUI window...' -ForegroundColor Yellow",
+            "Write-Host 'Waiting for installation to complete...' -ForegroundColor Yellow",
+            "Start-Sleep -Seconds 5",
+            "while (Get-Process -Name 'setup' -ErrorAction SilentlyContinue) { Start-Sleep -Seconds 2 }",
+            "if (Test-Path \"$dir\\setup.exe\") { Remove-Item \"$dir\\setup.exe\" -Force }"
+        ]
+    },
+    "shortcuts": [
+        [
+            "WeaselServer.exe",
+            "Weasel Server"
+        ],
+        [
+            "WeaselDeployer.exe",
+            "Weasel Deployer"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/rime/weasel",
+        "regex": "weasel-([\\d.]+)\\.0-installer\\.exe"
+    },
+    "autoupdate": {
+        "url": "https://github.com/rime/weasel/releases/download/$version/weasel-$version.0-installer.exe#/setup.exe"
+    }
+}
