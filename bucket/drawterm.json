@@ -1,0 +1,22 @@
+{
+    "$schema": "https://get.scoop.sh/schema.json",
+    "version": "nightly",
+    "description": "Drawterm — classic Plan 9 remote CPU terminal (Russ Cox original)",
+    "homepage": "https://swtch.com/drawterm/",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://swtch.com/drawterm/drawterm.zip",
+            "hash": "22e1a7c9c9357d33912929298379cde2bf127a2a6197b33ca47f848f370fe5f1"
+        }
+    },
+    "bin": [
+        "drawterm.exe"
+    ],
+    "shortcuts": [
+        [
+            "drawterm.exe",
+            "Drawterm (classic)"
+        ]
+    ]
+}

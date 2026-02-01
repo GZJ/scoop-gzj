@@ -1,0 +1,25 @@
+{
+    "$schema": "https://get.scoop.sh/schema.json",
+    "version": "nightly",
+    "description": "Drawterm — 9front fork with updated auth/TLS support",
+    "homepage": "https://drawterm.9front.org/",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://iso.only9fans.com/drawterm/drawterm-amd64.exe.zip",
+            "hash": "488ed0a261d7138e56d5632308fa654ddf098693129777ca065794993c91e082"
+        }
+    },
+    "pre_install": [
+        "Rename-Item \"$dir\\drawterm-amd64.exe\" \"$dir\\drawterm-9front.exe\""
+    ],
+    "bin": [
+        "drawterm-9front.exe"
+    ],
+    "shortcuts": [
+        [
+            "drawterm-9front.exe",
+            "Drawterm (9front)"
+        ]
+    ]
+}
