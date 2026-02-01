@@ -1,0 +1,37 @@
+
+{
+    "version": "3.0.3",
+    "description": "Open-source KVM software for sharing one mouse and keyboard between multiple computers",
+    "homepage": "https://github.com/input-leap/input-leap",
+    "license": "GPL-2.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/input-leap/input-leap/releases/download/v3.0.3/windows-2022-Debug-v3.0.3.tar.gz#/dl.tar.gz",
+            "hash": "07779f5465ad631ed52b86156ee80337a0c9514590626f18d98eeb0237c84b1e"
+        }
+    },
+    "pre_install": [
+        "Expand-Archive \"$dir\\windows-2022-Debug\\Debug.zip\" \"$dir\" -Force",
+        "Remove-Item \"$dir\\windows-2022-Debug\" -Recurse -Force"
+    ],
+    "bin": [
+        "input-leap.exe",
+        "input-leapc.exe",
+        "input-leapd.exe",
+        "input-leaps.exe"
+    ],
+    "shortcuts": [
+        [
+            "input-leap.exe",
+            "Input Leap"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/input-leap/input-leap/releases/download/v$version/windows-2022-Debug-v$version.tar.gz#/dl.tar.gz"
+            }
+        }
+    }
+}
